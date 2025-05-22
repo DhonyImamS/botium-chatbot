@@ -1,1 +1,23 @@
- 
+#me
+#botiumcapability OPTIONAL
+#botiumcapability WAIT_FOR_ELEMENT xpath=//button[text()='Nanti']
+#botiumcapability CLICK_ELEMENT xpath=//button[text()='Nanti']
+#botiumcapability END_OPTIONAL
+#botiumcapability WAIT_FOR_ELEMENT button[class="va-ui-chat-button"]
+#botiumcapability CLICK_ELEMENT button[class="va-ui-chat-button"]
+#botiumcapability WAIT_FOR_ELEMENT input[type="text"][placeholder="Nama"]
+#botiumcapability SET_ELEMENT_TEXT input[type="text"][placeholder="Nama"] Danu
+#botiumcapability CLICK_ELEMENT button[type="submit"]
+#botiumcapability WAIT_FOR_ELEMENT div[class="va-ui-chat-window"]
+
+#me
+Halo
+
+#bot
+Welcome to Telkomsel
+
+#me
+Saya mau tanya paket data
+
+#bot
+Silakan pilih paket data yang Anda inginkan 

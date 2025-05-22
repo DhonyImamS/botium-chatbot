@@ -3,7 +3,10 @@
     "Capabilities": {
       "PROJECTNAME": "telkomsel-chatbot-test",
       "CONTAINERMODE": "webdriverio",
+      "SAFEDIR": ".",
+      "CLEANUPTEMPDIR": false,
       "WEBDRIVERIO_URL": "https://www.telkomsel.com/support/contact-us",
+      "WEBDRIVERIO_OPENBOT": "./actions/open_bot.js",
       "WEBDRIVERIO_BROWSER": "chrome",
       "WEBDRIVERIO_WAITFOR_TIMEOUT": 10000,
       "WEBDRIVERIO_WAITFOR_INTERVAL": 1000,
@@ -12,9 +15,14 @@
         "port": 4444,
         "path": "/wd/hub",
         "capabilities": {
-          "browserName": "chrome"
+          "browserName": "chrome",
+          "goog:chromeOptions": {
+            "args": ["--start-maximized"]
+          }
         }
-      }
+      },
+      "WEBDRIVERIO_INPUT_ELEMENT": "textarea[id='va-ui-textInput']",
+      "WEBDRIVERIO_SEND_BUTTON": "button[class='va-ui-send-button']"
     },
     "Sources": {
       "webdriverio": {

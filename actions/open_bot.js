@@ -1,9 +1,9 @@
 module.exports = async (container, browser) => {
-    const modalConsent = await browser.$('div#cookiesSection')
+    const modalConsent = await browser.$('div.cookies-content')
 
     // Wait for modalConsent to be displayed with a loop
-    const timeout = 20000; // 20 seconds timeout
-    const interval = 500; // check every 500ms
+    const timeout = 60000; // 20 seconds timeout
+    const interval = 1500; // check every 500ms
     let isDisplayed = false;
     const startTime = Date.now();
 
@@ -24,12 +24,17 @@ module.exports = async (container, browser) => {
 
     // open chat bot
     await browser.pause(3000)
-
-    const chatBotIcon = await browser.$('#va-ui-show')
-    await chatBotIcon.waitForDisplayed({ timeout: 20000 })
-    await chatBotIcon.waitForClickable({ timeout: 20000 })
-    await chatBotIcon.click()
-
+    while (Date.now() - startTime < timeout) {
+        const chatBotIcon = await browser.$('#va-ui-show')
+        isDisplayed = await chatBotIcon.isDisplayed();
+        if (isDisplayed) {
+            await chatBotIcon.waitForClickable({ timeout: 20000 })
+            await chatBotIcon.click()
+            break; // Element is displayed, exit the loop
+        }
+        await browser.pause(interval);
+    }
+   
     // type customer name
     const nameInput = await browser.$('input#va-ui-username')
     await nameInput.waitForDisplayed({ timeout: 20000 })
