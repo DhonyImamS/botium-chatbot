@@ -1,0 +1,29 @@
+{
+  "name": "telkomsel-chatbot-test",
+  "version": "1.0.0",
+  "description": "Botium test for Telkomsel chatbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha spec"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "botium-bindings": "^2.1.14",
+    "botium-connector-webdriverio": "^0.4.2",
+    "chai": "^4.3.4",
+    "chromedriver": "^136.0.2",
+    "mocha": "^11.4.0",
+    "selenium-standalone": "^10.0.1",
+    "webdriverio": "^9.14.0"
+  },
+  "botium": {
+    "convodirs": [
+      "spec/convo"
+    ],
+    "expandConvos": true,
+    "expandUtterancesToConvos": false,
+    "expandScriptingMemoryToConvos": false
+  }
+}

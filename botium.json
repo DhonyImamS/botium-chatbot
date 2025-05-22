@@ -1,0 +1,26 @@
+{
+  "botium": {
+    "Capabilities": {
+      "PROJECTNAME": "telkomsel-chatbot-test",
+      "CONTAINERMODE": "webdriverio",
+      "WEBDRIVERIO_URL": "https://www.telkomsel.com/support/contact-us",
+      "WEBDRIVERIO_BROWSER": "chrome",
+      "WEBDRIVERIO_WAITFOR_TIMEOUT": 10000,
+      "WEBDRIVERIO_WAITFOR_INTERVAL": 1000,
+      "WEBDRIVERIO_OPTIONS": {
+        "hostname": "localhost",
+        "port": 4444,
+        "path": "/wd/hub",
+        "capabilities": {
+          "browserName": "chrome"
+        }
+      }
+    },
+    "Sources": {
+      "webdriverio": {
+        "type": "webdriverio"
+      }
+    },
+    "Envs": {}
+  }
+}
