@@ -4,7 +4,7 @@
   "description": "Botium test for Telkomsel chatbot",
   "main": "index.js",
   "scripts": {
-    "test": "mocha spec"
+    "test": "botium-cli run --config botium.json --convos spec/convo"
   },
   "keywords": [],
   "author": "",

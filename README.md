@@ -11,7 +11,11 @@ This project contains automated tests for the Telkomsel chatbot on the contact u
 ## Setup
 
 1. Ensure you have Node.js and npm installed.
-2. Install project dependencies:
+2. Install Botium CLI globally:
+   ```bash
+   npm install -g botium-cli
+   ```
+3. Install project dependencies:
    ```bash
    npm install
    ```
